@@ -1,6 +1,7 @@
-/* =========================================
-   1. CONFIGURACIÓN GENERAL
-========================================= */
+css
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
 
 * {
     margin: 0;
@@ -9,10 +10,11 @@
 }
 
 :root {
-    --fondo: #f5f3ed;
-    --texto: #202020;
-    --linea: #303030;
-    --espacio: 30px;
+    --rosado: #ff99c2;
+    --fondo: #ffffff;
+    --texto: #080808;
+    --linea: #b5b5b5;
+    --margen: 20px;
 }
 
 html {
@@ -20,9 +22,9 @@ html {
 }
 
 body {
-    background-color: var(--fondo);
+    background: var(--fondo);
     color: var(--texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, "Times New Roman", serif;
     overflow-x: hidden;
 }
 
@@ -31,171 +33,150 @@ a {
     text-decoration: none;
 }
 
-button {
-    font: inherit;
-    color: inherit;
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-/* =========================================
-   2. HEADER
-========================================= */
+/* =====================================
+   HEADER ROSADO
+===================================== */
 
 .header {
-    width: 100%;
-    min-height: 90px;
-    padding: 25px var(--espacio);
+    background: var(--rosado);
+    min-height: 108px;
+    padding: 8px var(--margen);
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
 
     border-bottom: 1px solid var(--linea);
-    position: relative;
-    z-index: 10;
 }
 
-.nombre {
-    font-size: clamp(20px, 3vw, 32px);
-    font-weight: 500;
-    letter-spacing: -1px;
+.header h1 {
+    font-size: clamp(36px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -3px;
 }
 
-.menu-boton {
-    width: 48px;
-    height: 48px;
-
-    border: 1px solid var(--linea);
-    background: transparent;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.menu-boton:hover {
-    background-color: var(--texto);
-    color: var(--fondo);
-}
-
-
-/* =========================================
-   3. MENÚ DESPLEGABLE
-========================================= */
-
-.menu {
-    position: absolute;
-    top: 100%;
-    right: var(--espacio);
-
-    width: 240px;
-    padding: 12px;
-
-    background-color: var(--fondo);
-    border: 1px solid var(--linea);
-
+.contacto {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: flex-end;
 
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-
-    transition:
-        opacity 0.3s,
-        transform 0.3s,
-        visibility 0.3s;
+    font-size: clamp(12px, 1.5vw, 19px);
+    line-height: 1.15;
+    text-align: right;
 }
 
-.menu.activo {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.menu a {
-    padding: 15px;
-    border-bottom: 1px solid #d0cec7;
-    transition: background 0.2s;
-}
-
-.menu a:last-child {
-    border-bottom: none;
-}
-
-.menu a:hover {
-    background-color: #e7e3d9;
+.contacto a:hover {
+    text-decoration: underline;
 }
 
 
-/* =========================================
-   4. INTRODUCCIÓN
-========================================= */
+/* =====================================
+   PRESENTACIÓN
+===================================== */
 
-.introduccion {
-    padding: 60px var(--espacio) 45px;
+.presentacion {
+    padding: 24px var(--margen) 30px;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: start;
+    gap: 0;
 }
 
-.introduccion h1 {
-    font-size: clamp(35px, 7vw, 85px);
-    line-height: 0.95;
-    font-weight: 400;
-    letter-spacing: -3px;
-    max-width: 900px;
-}
-
-.introduccion p {
-    margin-top: 25px;
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-
-/* =========================================
-   5. SECCIONES DE PROYECTOS
-========================================= */
-
-.seccion-proyectos {
-    padding: 25px 0 60px;
-    border-top: 1px solid var(--linea);
-}
-
-.encabezado-seccion {
-    padding: 0 var(--espacio);
-    margin-bottom: 25px;
-
+.presentacion-texto {
+    padding-right: 30px;
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 15px;
+    flex-direction: column;
 }
 
-.encabezado-seccion h2 {
-    font-size: clamp(22px, 4vw, 38px);
+.presentacion-texto p {
+    max-width: 390px;
+    font-size: clamp(14px, 1.35vw, 18px);
+    line-height: 1.2;
+}
+
+.presentacion-texto h2 {
+    margin-top: 30px;
+
+    font-size: clamp(34px, 4vw, 52px);
     font-weight: 400;
-    letter-spacing: -1px;
-}
-
-.encabezado-seccion span {
-    font-size: 13px;
+    letter-spacing: -1.5px;
 }
 
 
-/* =========================================
-   6. SLIDE HORIZONTAL DE TARJETAS
-========================================= */
+/* =====================================
+   COMPOSICIÓN DE IMÁGENES DE PORTADA
+===================================== */
+
+.presentacion-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 2 / 1;
+    min-width: 0;
+}
+
+.imagen-grande {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.imagen-grande img,
+.imagen-mediana img,
+.imagenes-pequenas img {
+    transition: transform 0.4s ease;
+}
+
+.presentacion-imagenes a {
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+}
+
+.presentacion-imagenes a:hover img {
+    transform: scale(1.04);
+}
+
+.imagenes-derecha {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-width: 0;
+}
+
+.imagen-mediana {
+    min-height: 0;
+}
+
+.imagenes-pequenas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 0;
+}
+
+
+/* =====================================
+   GALERÍA HORIZONTAL
+===================================== */
+
+.galeria-seccion {
+    width: 100%;
+    padding-bottom: 45px;
+}
 
 .galeria {
     display: flex;
-    gap: 18px;
+    gap: 24px;
 
-    padding: 10px var(--espacio) 25px;
+    padding: 0 var(--margen) 15px;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -204,7 +185,13 @@ button {
     scroll-behavior: smooth;
 
     scrollbar-width: thin;
-    scrollbar-color: #777 transparent;
+    scrollbar-color: #999 transparent;
+
+    cursor: grab;
+}
+
+.galeria:active {
+    cursor: grabbing;
 }
 
 .galeria::-webkit-scrollbar {
@@ -212,398 +199,157 @@ button {
 }
 
 .galeria::-webkit-scrollbar-thumb {
-    background: #777;
+    background: #999;
     border-radius: 10px;
 }
 
 
-/* Cada tarjeta */
+/* Tarjetas */
 
 .tarjeta {
-    flex: 0 0 280px;
-    scroll-snap-align: start;
+    flex: 0 0 183px;
+    min-width: 0;
 
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 
-    cursor: pointer;
+    scroll-snap-align: start;
 }
 
-.tarjeta-imagen {
+.tarjeta img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
 
-    background-color: #dedbd2;
-    overflow: hidden;
-
-    border: 1px solid #d0cec7;
-}
-
-.tarjeta-imagen img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    background: #baff82;
 
-    display: block;
-
-    transition: transform 0.5s;
+    transition: opacity 0.3s, transform 0.4s;
 }
 
-.tarjeta:hover .tarjeta-imagen img {
-    transform: scale(1.04);
+.tarjeta:hover img {
+    opacity: 0.85;
+    transform: scale(0.98);
 }
 
-.tarjeta h3 {
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.tarjeta p {
+.tarjeta span {
     font-size: 13px;
-    line-height: 1.5;
-    color: #555;
-}
-
-.tarjeta-info {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.tarjeta-numero {
-    font-size: 12px;
-    color: #777;
+    line-height: 1.3;
 }
 
 
-/* =========================================
-   7. SEGUNDA COMPOSICIÓN DE PROYECTOS
-========================================= */
+/* =====================================
+   FRASE CON IMÁGENES
+===================================== */
 
-.seccion-composicion {
-    padding: 30px var(--espacio) 80px;
-    border-top: 1px solid var(--linea);
-}
+.frase-seccion {
+    padding: 60px var(--margen);
 
-.composicion {
     display: grid;
-
-    grid-template-columns:
-        repeat(12, minmax(0, 1fr));
-
-    gap: 15px;
-    align-items: start;
-}
-
-.composicion .tarjeta {
-    width: 100%;
-    min-width: 0;
-}
-
-/* Tarjetas pequeñas a la izquierda */
-
-.proyecto-a {
-    grid-column: span 2;
-}
-
-.proyecto-b {
-    grid-column: span 2;
-}
-
-.proyecto-c {
-    grid-column: span 3;
-}
-
-/* Espacio central libre */
-
-.espacio-libre {
-    grid-column: span 3;
-    min-height: 250px;
-}
-
-/* Tarjetas a la derecha */
-
-.proyecto-d {
-    grid-column: span 2;
-}
-
-.proyecto-e {
-    grid-column: span 2;
-}
-
-
-/* =========================================
-   8. SECCIÓN DE FRASE Y COLLAGE
-========================================= */
-
-.seccion-frase {
-    padding: 70px var(--espacio);
-    border-top: 1px solid var(--linea);
-    border-bottom: 1px solid var(--linea);
-}
-
-.collage {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-
-    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+    gap: 25px;
+
+    border-top: 1px solid var(--linea);
 }
 
-.collage-imagen {
+.frase-imagen {
     width: 100%;
     aspect-ratio: 4 / 5;
-
-    background-color: #dedbd2;
     overflow: hidden;
 }
 
-.collage-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.frase {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
-
+.frase-contenido {
     text-align: center;
-    padding: 30px 10px;
+    padding: 20px;
 }
 
-.frase h2 {
-    font-size: clamp(28px, 4.5vw, 60px);
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -2px;
-}
-
-.frase p {
-    margin-top: 20px;
-    font-size: 13px;
-}
-
-/* Posición de las imágenes */
-
-.collage-imagen:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.collage-imagen:nth-child(2) {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-.collage-imagen:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.collage-imagen:nth-child(4) {
-    grid-column: 4;
-    grid-row: 2;
+.frase-contenido p {
+    font-size: clamp(25px, 4vw, 52px);
+    line-height: 1.15;
+    font-style: italic;
 }
 
 
-/* =========================================
-   9. PÁGINA INDIVIDUAL DEL PROYECTO
-========================================= */
-
-.proyecto-detalle {
-    padding: 50px var(--espacio) 80px;
-}
-
-.proyecto-cabecera {
-    margin-bottom: 35px;
-}
-
-.proyecto-cabecera h1 {
-    font-size: clamp(35px, 7vw, 80px);
-    font-weight: 400;
-    letter-spacing: -3px;
-    margin-bottom: 20px;
-}
-
-.proyecto-descripcion {
-    max-width: 650px;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.proyecto-portada {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background-color: #dedbd2;
-    overflow: hidden;
-}
-
-.proyecto-portada img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.proyecto-galeria {
-    margin-top: 50px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.proyecto-galeria img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.proyecto-texto {
-    max-width: 650px;
-    margin: 50px auto;
-
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.proyecto-interactivo {
-    margin-top: 50px;
-    width: 100%;
-    min-height: 500px;
-    border: 1px solid var(--linea);
-}
-
-.proyecto-interactivo iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-}
-
-
-/* =========================================
-   10. FOOTER
-========================================= */
+/* =====================================
+   FOOTER
+===================================== */
 
 .footer {
-    padding: 35px var(--espacio);
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 30px;
+    padding: 20px var(--margen);
 
     border-top: 1px solid var(--linea);
-}
 
-.footer-nombre {
-    font-size: 22px;
-}
-
-.footer-info {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 
     font-size: 13px;
 }
 
-.footer-info a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
 
-.footer-copy {
-    font-size: 12px;
-    color: #777;
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (min-width: 1200px) {
+    .tarjeta {
+        flex-basis: 16vw;
+    }
 }
-
-
-/* =========================================
-   11. ADAPTACIÓN A CELULARES
-========================================= */
 
 @media (max-width: 700px) {
 
     :root {
-        --espacio: 18px;
+        --margen: 12px;
     }
 
     .header {
-        min-height: 75px;
-    }
-
-    .introduccion {
-        padding-top: 45px;
-    }
-
-    .introduccion h1 {
-        letter-spacing: -2px;
-    }
-
-    .tarjeta {
-        flex-basis: 75vw;
-    }
-
-    .composicion {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .proyecto-a,
-    .proyecto-b,
-    .proyecto-c,
-    .proyecto-d,
-    .proyecto-e {
-        grid-column: span 1;
-    }
-
-    .espacio-libre {
-        display: none;
-    }
-
-    .collage {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-height: 90px;
         gap: 12px;
     }
 
-    .frase {
-        grid-column: 1 / 3;
-        grid-row: 2;
+    .header h1 {
+        letter-spacing: -1.5px;
     }
 
-    .collage-imagen:nth-child(1) {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .collage-imagen:nth-child(2) {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .collage-imagen:nth-child(3) {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .collage-imagen:nth-child(4) {
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .proyecto-galeria {
+    .presentacion {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 
-    .proyecto-interactivo iframe {
-        height: 450px;
+    .presentacion-texto {
+        padding-right: 0;
+    }
+
+    .presentacion-texto h2 {
+        margin-top: 25px;
+    }
+
+    .presentacion-imagenes {
+        width: 100%;
+    }
+
+    .tarjeta {
+        flex-basis: 55vw;
+    }
+
+    .frase-seccion {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .frase-contenido {
+        grid-column: 1 / -1;
+        grid-row: 1;
     }
 
     .footer {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
