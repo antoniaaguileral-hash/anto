@@ -1,14 +1,72 @@
-Portafolio digital
-@Antoaguilazo Antito.aguilazo@gmail.com
-Este portafolio reúne proyectos de diseño, experimentación visual y programación creativa. Un espacio para explorar formas, movimientos e interacciones a través del código.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio digital | Antonia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Portafolio digital</h1>
+    <div class="contacto">
+      <a href="https://www.instagram.com/Antoaguilazo/" target="_blank" rel="noopener noreferrer">@Antoaguilazo</a>
+      <a href="mailto:Antito.aguilazo@gmail.com">Antito.aguilazo@gmail.com</a>
+    </div>
+  </header>
 
-Imagen principal del portafolio
-Proyecto 1
-Proyecto 2 Proyecto 3 Proyecto 4
-Proyectos
-Proyecto 101 — Proyecto uno Proyecto 202 — Proyecto dos Proyecto 303 — Proyecto tres Proyecto 404 — Proyecto cuatro Proyecto 505 — Proyecto cinco Proyecto 606 — Proyecto seis
-Detalle de un proyecto
-“Diseñar es explorar posibilidades, experimentar y transformar ideas.”
+  <main>
+    <!-- Primera franja: presentación y collage -->
+    <section class="presentacion" aria-label="Presentación">
+      <div class="presentacion-texto">
+        <p>Este portafolio reúne proyectos de diseño, experimentación visual y programación creativa. Un espacio para explorar formas, movimientos e interacciones a través del código.</p>
+      </div>
+      <div class="presentacion-imagenes">
+        <div class="imagen-grande">
+          <img src="imagenes/portada.jpg" alt="Imagen principal del portafolio">
+        </div>
+        <div class="imagenes-derecha">
+          <a href="proyectos/proyecto-01/index.html" class="imagen-mediana">
+            <img src="imagenes/proyecto-01.jpg" alt="Proyecto 1">
+          </a>
+          <div class="imagenes-pequenas">
+            <a href="proyectos/proyecto-02/index.html"><img src="imagenes/proyecto-02.jpg" alt="Proyecto 2"></a>
+            <a href="proyectos/proyecto-03/index.html"><img src="imagenes/proyecto-03.jpg" alt="Proyecto 3"></a>
+            <a href="proyectos/proyecto-04/index.html"><img src="imagenes/proyecto-04.jpg" alt="Proyecto 4"></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-Proceso creativo
-Antonia Aguilera Contacto Portafolio digital · 2026
+    <!-- Título debajo de la primera franja -->
+    <section class="titulo-proyectos" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Proyectos</h2>
+    </section>
+
+    <!-- Seis proyectos, desplazamiento horizontal -->
+    <section class="galeria-seccion" aria-label="Galería de proyectos">
+      <div class="galeria" id="galeria">
+        <a href="proyectos/proyecto-01/index.html" class="tarjeta"><img src="imagenes/proyecto-01.jpg" alt="Proyecto 1"><span>01 — Proyecto uno</span></a>
+        <a href="proyectos/proyecto-02/index.html" class="tarjeta"><img src="imagenes/proyecto-02.jpg" alt="Proyecto 2"><span>02 — Proyecto dos</span></a>
+        <a href="proyectos/proyecto-03/index.html" class="tarjeta"><img src="imagenes/proyecto-03.jpg" alt="Proyecto 3"><span>03 — Proyecto tres</span></a>
+        <a href="proyectos/proyecto-04/index.html" class="tarjeta"><img src="imagenes/proyecto-04.jpg" alt="Proyecto 4"><span>04 — Proyecto cuatro</span></a>
+        <a href="proyectos/proyecto-05/index.html" class="tarjeta"><img src="imagenes/proyecto-05.jpg" alt="Proyecto 5"><span>05 — Proyecto cinco</span></a>
+        <a href="proyectos/proyecto-06/index.html" class="tarjeta"><img src="imagenes/proyecto-06.jpg" alt="Proyecto 6"><span>06 — Proyecto seis</span></a>
+      </div>
+    </section>
+
+    <!-- Frase y collage final -->
+    <section class="frase-seccion">
+      <div class="frase-imagen"><img src="imagenes/collage-01.jpg" alt="Detalle de un proyecto"></div>
+      <div class="frase-contenido"><p>“Diseñar es explorar posibilidades, experimentar y transformar ideas.”</p></div>
+      <div class="frase-imagen"><img src="imagenes/collage-02.jpg" alt="Proceso creativo"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Antonia Aguilera</span>
+    <a href="mailto:Antito.aguilazo@gmail.com">Contacto</a>
+    <span>Portafolio digital · 2026</span>
+  </footer>
+</body>
+</html>
