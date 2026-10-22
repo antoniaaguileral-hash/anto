@@ -1,143 +1,609 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
 
-/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #f5f3ed;
+    --texto: #202020;
+    --linea: #303030;
+    --espacio: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: sans-serif;
-    margin: 70px;
-    margin-top:0;
-    padding: 2em;
-    background-color: #f4f4f4;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    color: inherit;
 }
 
 
-h1, h2 {
-    font-family: 'Space Mono';
-    color: #333;
-}
+/* =========================================
+   2. HEADER
+========================================= */
 
-h3{
-    font-family: 'Open Sans';
-    font-size: 1em;
-}
+.header {
+    width: 100%;
+    min-height: 90px;
+    padding: 25px var(--espacio);
 
-/* --- Contenedor Principal --- */
-#container {
-    display: grid;
-    /* Define 2 columnas: la primera ocupa 1 fracción, la segunda 2 fracciones */
-    grid-template-columns: 1fr 2fr;
-    gap: 5em; /* Espacio entre las columnas */
-    align-items: start; /* Alinea los items al inicio */
-}
-
-/* --- Columna Izquierda: Intro --- */
-.intro {
-    /* Por defecto, se ubica en la primera columna del grid */
     display: flex;
-    flex-direction: column; /* Organiza los elementos internos en una columna */
-    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--linea);
+    position: relative;
+    z-index: 10;
 }
 
-.intro p {
-    /* El párrafo ya usa el ancho de su contenedor por defecto */
-    font-family: 'Open Sans';
-    text-align: justify;
+.nombre {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.menu-boton {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--linea);
+    background: transparent;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu-boton:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+
+/* =========================================
+   3. MENÚ DESPLEGABLE
+========================================= */
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: var(--espacio);
+
+    width: 240px;
+    padding: 12px;
+
+    background-color: var(--fondo);
+    border: 1px solid var(--linea);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.3s,
+        transform 0.3s,
+        visibility 0.3s;
+}
+
+.menu.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu a {
+    padding: 15px;
+    border-bottom: 1px solid #d0cec7;
+    transition: background 0.2s;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu a:hover {
+    background-color: #e7e3d9;
+}
+
+
+/* =========================================
+   4. INTRODUCCIÓN
+========================================= */
+
+.introduccion {
+    padding: 60px var(--espacio) 45px;
+}
+
+.introduccion h1 {
+    font-size: clamp(35px, 7vw, 85px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -3px;
+    max-width: 900px;
+}
+
+.introduccion p {
+    margin-top: 25px;
+    max-width: 500px;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-.intro a {
-    /* El ancla del botón se centrará gracias al 'align-self' */
-    align-self: center; /* Centra este elemento específico en el eje transversal */
-    margin-top: 1em;
+
+/* =========================================
+   5. SECCIONES DE PROYECTOS
+========================================= */
+
+.seccion-proyectos {
+    padding: 25px 0 60px;
+    border-top: 1px solid var(--linea);
 }
 
-.intro button {
-    font-family: 'Space Mono';
-    font-size: 1em;
-    padding: 15px 45px;
-    margin-top: 30px;
-    border: none;
-    background-color: #a588f4;
-    color: #000;
- 
-    cursor: pointer;
-    border-radius: 50px;
-    
+.encabezado-seccion {
+    padding: 0 var(--espacio);
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.intro button:hover {
-    background: #000; ;
-    color: white;
+.encabezado-seccion h2 {
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 400;
+    letter-spacing: -1px;
+}
 
+.encabezado-seccion span {
+    font-size: 13px;
 }
 
 
-/* Columna Derecha: Proyectos */
-.proyectos {
+/* =========================================
+   6. SLIDE HORIZONTAL DE TARJETAS
+========================================= */
+
+.galeria {
+    display: flex;
+    gap: 18px;
+
+    padding: 10px var(--espacio) 25px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+    scrollbar-color: #777 transparent;
+}
+
+.galeria::-webkit-scrollbar {
+    height: 5px;
+}
+
+.galeria::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+
+
+/* Cada tarjeta */
+
+.tarjeta {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+
     display: flex;
     flex-direction: column;
-    /* Por defecto, se ubica en la segunda columna del grid */
+    gap: 12px;
+
+    cursor: pointer;
 }
 
-/* --- Galería de Proyectos --- */
-.galeria {
-    display: grid;
-    /* Define 3 columnas de igual tamaño */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5em; /* Espacio entre las tarjetas */
-}
-
-/* --- Tarjetas Individuales --- */
-.tarjeta {
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
-}
-
-.tarjeta a {
-    /* El ancla ocupa todo el espacio de su columna en la galería */
-    display: block; /* Permite que el ancla ocupe todo el espacio */
+.tarjeta-imagen {
     width: 100%;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease-in-out;
+    aspect-ratio: 4 / 5;
+
+    background-color: #dedbd2;
+    overflow: hidden;
+
+    border: 1px solid #d0cec7;
 }
 
-.tarjeta a:hover {
-    filter: brightness(70%); /* Aplica un filtro de brillo al 70% (más oscuro) */
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-}
-
-.tarjeta img {
-    /* La imagen se ajusta al ancho del ancla */
+.tarjeta-imagen img {
     width: 100%;
-    display: block; /* Elimina espacios en blanco debajo de la imagen */
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s;
+}
+
+.tarjeta:hover .tarjeta-imagen img {
+    transform: scale(1.04);
 }
 
 .tarjeta h3 {
-    text-align: center;
-    padding: 0.5em 0;
-    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.tarjeta p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.tarjeta-info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tarjeta-numero {
+    font-size: 12px;
+    color: #777;
 }
 
 
-/* --- Media Query para pantallas pequeñas --- */
-@media (max-width: 900px) {
-    
-    /* Ajusta los márgenes del body para aprovechar el espacio */
-    body {
-        margin: 20px;
-        padding: 1em;
+/* =========================================
+   7. SEGUNDA COMPOSICIÓN DE PROYECTOS
+========================================= */
+
+.seccion-composicion {
+    padding: 30px var(--espacio) 80px;
+    border-top: 1px solid var(--linea);
+}
+
+.composicion {
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+
+    gap: 15px;
+    align-items: start;
+}
+
+.composicion .tarjeta {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Tarjetas pequeñas a la izquierda */
+
+.proyecto-a {
+    grid-column: span 2;
+}
+
+.proyecto-b {
+    grid-column: span 2;
+}
+
+.proyecto-c {
+    grid-column: span 3;
+}
+
+/* Espacio central libre */
+
+.espacio-libre {
+    grid-column: span 3;
+    min-height: 250px;
+}
+
+/* Tarjetas a la derecha */
+
+.proyecto-d {
+    grid-column: span 2;
+}
+
+.proyecto-e {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   8. SECCIÓN DE FRASE Y COLLAGE
+========================================= */
+
+.seccion-frase {
+    padding: 70px var(--espacio);
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+}
+
+.collage {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+
+    gap: 20px;
+    align-items: center;
+}
+
+.collage-imagen {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    background-color: #dedbd2;
+    overflow: hidden;
+}
+
+.collage-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.frase {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.frase h2 {
+    font-size: clamp(28px, 4.5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.frase p {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* Posición de las imágenes */
+
+.collage-imagen:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.collage-imagen:nth-child(2) {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.collage-imagen:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.collage-imagen:nth-child(4) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+/* =========================================
+   9. PÁGINA INDIVIDUAL DEL PROYECTO
+========================================= */
+
+.proyecto-detalle {
+    padding: 50px var(--espacio) 80px;
+}
+
+.proyecto-cabecera {
+    margin-bottom: 35px;
+}
+
+.proyecto-cabecera h1 {
+    font-size: clamp(35px, 7vw, 80px);
+    font-weight: 400;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.proyecto-descripcion {
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.proyecto-portada {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #dedbd2;
+    overflow: hidden;
+}
+
+.proyecto-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proyecto-galeria {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.proyecto-galeria img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.proyecto-texto {
+    max-width: 650px;
+    margin: 50px auto;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.proyecto-interactivo {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid var(--linea);
+}
+
+.proyecto-interactivo iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+
+/* =========================================
+   10. FOOTER
+========================================= */
+
+.footer {
+    padding: 35px var(--espacio);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    border-top: 1px solid var(--linea);
+}
+
+.footer-nombre {
+    font-size: 22px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================================
+   11. ADAPTACIÓN A CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --espacio: 18px;
     }
 
-    /* Cambia el contenedor principal a una sola columna */
-    #container {
+    .header {
+        min-height: 75px;
+    }
+
+    .introduccion {
+        padding-top: 45px;
+    }
+
+    .introduccion h1 {
+        letter-spacing: -2px;
+    }
+
+    .tarjeta {
+        flex-basis: 75vw;
+    }
+
+    .composicion {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .proyecto-a,
+    .proyecto-b,
+    .proyecto-c,
+    .proyecto-d,
+    .proyecto-e {
+        grid-column: span 1;
+    }
+
+    .espacio-libre {
+        display: none;
+    }
+
+    .collage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .frase {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .collage-imagen:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .collage-imagen:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .collage-imagen:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .collage-imagen:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .proyecto-galeria {
         grid-template-columns: 1fr;
     }
 
-    /* Cambia la galería de proyectos a una sola columna */
-    .galeria {
-        grid-template-columns: 1fr;
+    .proyecto-interactivo iframe {
+        height: 450px;
+    }
+
+    .footer {
+        flex-direction: column;
     }
 }

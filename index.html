@@ -1,130 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anto+'</title>
+
+    <title>Mi portafolio | p5.js</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-<!-- Inicio Body -->
-
 <body>
 
-    <!-- Sección principal -->
-    <header>
-        <h1>Portafolio IE 2026</h1>
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="nombre">
+            Tu Nombre
+        </a>
+
+        <button
+            class="menu-boton"
+            id="menuBoton"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu"
+        >
+            ☰
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#composicion">Otros trabajos</a>
+            <a href="#frase">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
     </header>
 
-    <!-- Contenedor General -->
-    <div id="container">
 
-        <!-- Contenedor lado izquierdo - Parrafo y botón -->
-        <div class="intro">
-            <p>
-                Hola mi vida, puedes e¿leer este mensaje?? estoy en clase creando mi propia pagina en el internes, a lo mr guantecillo trajimos quesillo pa que usteeeeeeeeeeeeeeeeee cooooooooooooooooma despues ¨[*¨*[[*]]]
-            </p>
-            <p>
-                A través del creative coding se hace énfasis en el pensamiento computacional como herramienta de diseño,
-                fomentando un enfoque innovador en la resolución de problemas visuales y la creación artística. La
-                integración de herramientas de IA busca ampliar las posibilidades creativas y técnicas, sirviendo como
-                complemento al proceso de diseño y programación
-            </p>
+    <!-- INTRODUCCIÓN -->
+
+    <section class="introduccion">
+
+        <h1>
+            Diseño,<br>
+            código y experimentación.
+        </h1>
+
+        <p>
+            Un espacio para explorar proyectos creativos
+            desarrollados con p5.js, a través del código,
+            el movimiento y la interacción.
+        </p>
+
+    </section>
 
 
-            <a href="https://wiki.ead.pucv.cl/Sitio_Web_IE_-_Javiera_Ruiz" target="_blank">
-                <button>
-                    wiki del proyecto
-                </button>
+    <!-- GALERÍA PRINCIPAL -->
+
+    <section class="seccion-proyectos" id="proyectos">
+
+        <div class="encabezado-seccion">
+            <h2>Proyectos seleccionados</h2>
+            <span>01 — 05 / Desliza →</span>
+        </div>
+
+        <div class="galeria">
+
+            <a href="proyecto-01.html" class="tarjeta">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-01.jpg"
+                         alt="Imagen del proyecto uno">
+                </div>
+
+                <div class="tarjeta-info">
+                    <h3>Proyecto 01</h3>
+                    <span class="tarjeta-numero">01</span>
+                </div>
+
+                <p>Experimentación visual con p5.js.</p>
+
+            </a>
+
+
+            <a href="proyecto-02.html" class="tarjeta">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-02.jpg"
+                         alt="Imagen del proyecto dos">
+                </div>
+
+                <div class="tarjeta-info">
+                    <h3>Proyecto 02</h3>
+                    <span class="tarjeta-numero">02</span>
+                </div>
+
+                <p>Movimiento, formas y composición.</p>
+
+            </a>
+
+
+            <a href="proyecto-03.html" class="tarjeta">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-03.jpg"
+                         alt="Imagen del proyecto tres">
+                </div>
+
+                <div class="tarjeta-info">
+                    <h3>Proyecto 03</h3>
+                    <span class="tarjeta-numero">03</span>
+                </div>
+
+                <p>Exploración de interacciones.</p>
+
+            </a>
+
+
+            <a href="proyecto-04.html" class="tarjeta">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-04.jpg"
+                         alt="Imagen del proyecto cuatro">
+                </div>
+
+                <div class="tarjeta-info">
+                    <h3>Proyecto 04</h3>
+                    <span class="tarjeta-numero">04</span>
+                </div>
+
+                <p>Generación de imágenes mediante código.</p>
+
             </a>
 
         </div>
 
-        <!-- Contenedor lado derecho -->
-        <div class="proyectos">
-            <h2>Mis proyectos p5js</h2>
+    </section>
 
-            <!-- Contenedor galería de proyectos -->
-            <div class="galeria">
-                <!-- tarjeta proyecto 1 -->
-                <div class="tarjeta">
-                    <a href="https://editor.p5js.org/jruiz-IE/full/_D3gtXvo_" target="_blank">
-                        <img src="assets/imagen1.png">
-                        </img>
-                        <h3>Tarea 1</h3>
-                    </a>
+
+    <!-- SEGUNDA COMPOSICIÓN -->
+
+    <section class="seccion-composicion" id="composicion">
+
+        <div class="encabezado-seccion">
+            <h2>Más exploraciones</h2>
+            <span>Archivo de trabajos</span>
+        </div>
+
+        <div class="composicion">
+
+            <a href="proyecto-05.html"
+               class="tarjeta proyecto-a">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-05.jpg"
+                         alt="Proyecto cinco">
                 </div>
 
-                <!-- tarjeta proyecto 2 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 2</h3>
-                    </a>
+                <h3>Proyecto 05</h3>
+
+            </a>
+
+
+            <a href="proyecto-06.html"
+               class="tarjeta proyecto-b">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-06.jpg"
+                         alt="Proyecto seis">
                 </div>
 
-                <!-- tarjeta proyecto 3 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 3</h3>
-                    </a>
+                <h3>Proyecto 06</h3>
+
+            </a>
+
+
+            <a href="proyecto-07.html"
+               class="tarjeta proyecto-c">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-07.jpg"
+                         alt="Proyecto siete">
                 </div>
 
-                <!-- tarjeta proyecto 4 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 4</h3>
-                    </a>
+                <h3>Proyecto 07</h3>
+
+            </a>
+
+
+            <div class="espacio-libre">
+                <!-- Puedes dejar este espacio vacío -->
+                <!-- o utilizarlo para un texto o una animación -->
+            </div>
+
+
+            <a href="proyecto-08.html"
+               class="tarjeta proyecto-d">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-08.jpg"
+                         alt="Proyecto ocho">
                 </div>
 
-                <!-- tarjeta proyecto 5 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 5</h3>
-                    </a>
+                <h3>Proyecto 08</h3>
+
+            </a>
+
+
+            <a href="proyecto-09.html"
+               class="tarjeta proyecto-e">
+
+                <div class="tarjeta-imagen">
+                    <img src="imagenes/proyecto-09.jpg"
+                         alt="Proyecto nueve">
                 </div>
 
-                <!-- tarjeta proyecto 6 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 6</h3>
-                    </a>
-                </div>
+                <h3>Proyecto 09</h3>
 
-                <!-- tarjeta proyecto 7 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 7</h3>
-                    </a>
-                </div>
-                
-                <!-- tarjeta proyecto 8 -->
-                <div class="tarjeta">
-                    <a href="">
-                        <img src="assets/imagen2.png">
-                        </img>
-                        <h3>Tarea 8</h3>
-                    </a>
-                </div>
+            </a>
 
+        </div>
+
+    </section>
+
+
+    <!-- FRASE RODEADA DE IMÁGENES -->
+
+    <section class="seccion-frase" id="frase">
+
+        <div class="collage">
+
+            <div class="collage-imagen">
+                <img src="imagenes/collage-01.jpg"
+                     alt="Detalle de un proyecto">
+            </div>
+
+            <div class="collage-imagen">
+                <img src="imagenes/collage-02.jpg"
+                     alt="Proceso creativo">
+            </div>
+
+            <div class="frase">
+
+                <h2>
+                    Crear es explorar
+                    lo que todavía
+                    no existe.
+                </h2>
+
+                <p>Una frase personal o concepto de diseño.</p>
+
+            </div>
+
+            <div class="collage-imagen">
+                <img src="imagenes/collage-03.jpg"
+                     alt="Experimentación visual">
+            </div>
+
+            <div class="collage-imagen">
+                <img src="imagenes/collage-04.jpg"
+                     alt="Detalle de experimentación">
             </div>
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="contacto">
+
+        <div>
+            <p class="footer-nombre">Tu Nombre</p>
+            <p class="footer-copy">
+                Portafolio creativo · 2026
+            </p>
+        </div>
+
+        <div class="footer-info">
+            <a href="mailto:tuemail@ejemplo.com">
+                Correo electrónico
+            </a>
+
+            <a href="https://www.instagram.com/">
+                Instagram
+            </a>
+        </div>
+
+        <p class="footer-copy">
+            Diseño y experimentación digital.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT DEL MENÚ -->
+
+    <script>
+        const boton = document.getElementById("menuBoton");
+        const menu = document.getElementById("menu");
+
+        boton.addEventListener("click", () => {
+            const abierto = menu.classList.toggle("activo");
+
+            boton.setAttribute("aria-expanded", abierto);
+            boton.setAttribute(
+                "aria-label",
+                abierto ? "Cerrar menú" : "Abrir menú"
+            );
+
+            boton.textContent = abierto ? "✕" : "☰";
+        });
+    </script>
 
 </body>
 
