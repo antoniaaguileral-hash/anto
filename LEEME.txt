@@ -1,1 +1,11 @@
-Abre index.html con Live Server. Las tarjetas enlazan a las seis páginas. Cada página incrusta la versión full del sketch de p5.js, que requiere conexión a internet y que el sketch esté disponible públicamente. No se recibieron las imágenes, así que debes copiar tu carpeta imagenes original. Las imágenes de referencia y descripciones quedan pendientes para no inventar contenido.
+PORTAFOLIO P5.JS - ACTUALIZACIÓN DE DISEÑO
+
+Se conservó la página principal. Cada página de proyecto ahora muestra:
+1) p5.js hasta 400 x 400 a la izquierda y texto a la derecha.
+2) Imagen de referencia hasta 400 x 400 debajo y texto a la derecha.
+3) Footer original.
+
+Coloca las imágenes en la carpeta imagenes/ usando los nombres listados en NOMBRES_IMAGENES.txt.
+Abre index.html con Live Server. Los proyectos p5.js necesitan conexión a Internet.
+
+Actualización: título Portafolio digital a 12px en todas las páginas; fuente Alegreya SC en lugar de Italianno; páginas individuales con marco p5.js de hasta 400x400 px.
