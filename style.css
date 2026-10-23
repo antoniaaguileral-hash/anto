@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Libre+Baskerville:wght@400;700&display=swap');
 
 /* General */
 * { box-sizing: border-box; }
@@ -9,7 +9,7 @@ img { display: block; width: 100%; }
 
 /* Encabezado */
 .header { background: #f69ac4; min-height: 115px; padding: 12px 18px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
-.header h1 { font-family: 'Italianno', cursive; font-size: clamp(55px, 7vw, 95px); font-weight: 400; line-height: 1; margin: 0; }
+.header h1 { font-family: 'Alegreya', cursive; font-size: clamp(55px, 7vw, 95px); font-weight: 400; line-height: 1; margin: 0; }
 .contacto { display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 3px; padding-top: 8px; }
 .contacto a { font-size: 14px; overflow-wrap: anywhere; }
 .contacto a:hover, .footer a:hover { text-decoration: underline; }
@@ -27,7 +27,7 @@ img { display: block; width: 100%; }
 
 /* Título bajo la primera franja */
 .titulo-proyectos { margin: 25px 0 15px; padding-left: 16px; }
-.titulo-proyectos h2 { margin: 0; font-family: 'Italianno', cursive; font-size: 55px; font-weight: 400; line-height: 1; }
+.titulo-proyectos h2 { margin: 0; font-family: 'Alegreya', cursive; font-size: 55px; font-weight: 400; line-height: 1; }
 
 /* Galería deslizable de seis proyectos */
 .galeria-seccion { padding: 0 0 30px 16px; }
@@ -42,7 +42,7 @@ img { display: block; width: 100%; }
 .frase-imagen { flex: 1; min-width: 0; }
 .frase-imagen img { height: 240px; object-fit: cover; }
 .frase-contenido { flex: 2; min-width: 0; text-align: center; }
-.frase-contenido p { margin: 0; font-family: 'Italianno', cursive; font-size: 42px; line-height: 1.2; }
+.frase-contenido p { margin: 0; font-family: 'Alegreya', cursive; font-size: 42px; line-height: 1.2; }
 
 /* Pie de página */
 .footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px 18px; background: #f69ac4; font-size: 13px; }
