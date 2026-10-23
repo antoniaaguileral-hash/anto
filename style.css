@@ -11,7 +11,7 @@ img { display: block; width: 100%; }
 .header { background: #f69ac4; min-height: 115px; padding: 12px 18px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
 .header h1 { font-family: 'Alegreya', cursive; font-size: clamp(55px, 7vw, 95px); font-weight: 400; line-height: 1; margin: 0; }
 .contacto { display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 3px; padding-top: 8px; }
-.contacto a { font-size: 14px; overflow-wrap: anywhere; }
+.contacto a { font-size: 12px; overflow-wrap: anywhere; }
 .contacto a:hover, .footer a:hover { text-decoration: underline; }
 
 /* Primera franja */
