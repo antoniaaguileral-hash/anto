@@ -1,1 +1,0 @@
-Copia aquí las imágenes originales del portafolio. Para las referencias de cada proyecto, usa referencia-01.jpg, etc., y descomenta la etiqueta img en cada página de proyecto.
