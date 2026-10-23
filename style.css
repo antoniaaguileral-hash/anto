@@ -100,3 +100,12 @@ img { display: block; width: 100%; }
   .proyecto-panel { grid-template-columns: 1fr; gap: 14px; }
   .proyecto-marco { width: min(100%, 400px); }
 }
+
+/* Corrección: marcos cuadrados de 400px, sin agrandar con la columna */
+.proyecto-panel { grid-template-columns: 400px minmax(0, 1fr); }
+.proyecto-marco { width: 400px; height: 400px; max-width: 100%; aspect-ratio: auto; }
+.proyecto-marco iframe { display: block; width: 100%; height: 100%; border: 0; }
+@media (max-width: 700px) {
+  .proyecto-panel { grid-template-columns: minmax(0, 1fr); }
+  .proyecto-marco { width: min(400px, 100%); height: auto; aspect-ratio: 1 / 1; }
+}
