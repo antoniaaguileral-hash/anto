@@ -24,7 +24,7 @@ a:focus-visible { outline: 3px solid var(--tangerine); outline-offset: 4px; }
   display: flex; justify-content: space-between; align-items: center; gap: 20px;
   background: var(--pink); border-bottom: 1px solid var(--ink);
 }
-.header h1 { font-family: 'Alegreya SC', serif; font-size: 50px; font-weight: 500; letter-spacing: .11em; margin: 0; text-transform: uppercase; }
+.header h1 { font-family: 'Alegreya SC', serif; font-size: 12px; font-weight: 500; letter-spacing: .11em; margin: 0; text-transform: uppercase; }
 .contacto { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .contacto a { font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
 .contacto a:hover, .footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -301,4 +301,20 @@ main { max-width: 1500px; margin-inline: auto; }
   .frase-seccion { grid-template-columns: 1fr 1fr; }
   .frase-contenido { grid-column: 1 / -1; grid-row: 1; }
   .frase-imagen img, .frase-imagen:last-child img { height: auto; aspect-ratio: 4 / 5; }
+}
+
+/* CORRECCIÓN VISUAL: iframe sin barra del editor, marco cuadrado estable.
+   El modo /full/ de p5.js no muestra la barra rosa del editor. */
+.proyecto-marco--sketch {
+  width: min(100%, 400px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  flex: none;
+}
+.proyecto-marco--sketch iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
