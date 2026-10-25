@@ -1,1 +1,0 @@
-Se corrigio el iframe para usar la vista embed de p5.js y se fijo el marco a 400 x 400 px. Si el sketch internamente usa createCanvas con otras dimensiones, se debe modificar el sketch original. Conservar carpeta imagenes.
