@@ -19,7 +19,10 @@
     <!-- Primera franja: presentación y collage -->
     <section class="presentacion" aria-label="Presentación">
       <div class="presentacion-texto">
+        <span class="eyebrow">Diseño · Código · Naturaleza</span>
+        <h2>Un pequeño<br><em>universo</em> digital.</h2>
         <p>Este portafolio reúne proyectos de diseño, experimentación visual y programación creativa. Un espacio para explorar formas, movimientos e interacciones a través del código.</p>
+        <span class="decoracion-flor" aria-hidden="true">✿ ✳</span>
       </div>
       <div class="presentacion-imagenes">
         <div class="imagen-grande">
@@ -40,33 +43,37 @@
 
     <!-- Título debajo de la primera franja -->
     <section class="titulo-proyectos" aria-labelledby="titulo-galeria">
-      <h2 id="titulo-galeria">Proyectos</h2>
+      <div><span class="eyebrow">Explora mis experimentos</span><h2 id="titulo-galeria">Proyectos</h2></div><p class="indicacion">Desliza para explorar &nbsp; →</p>
     </section>
 
     <!-- Seis proyectos, desplazamiento horizontal -->
     <section class="galeria-seccion" aria-label="Galería de proyectos">
       <div class="galeria" id="galeria">
-        <a href="proyectos/proyecto-01/index.html" class="tarjeta"><img src="imagenes/proyecto-01.jpg" alt="Proyecto 1"><span>01 — Proyecto uno</span></a>
-        <a href="proyectos/proyecto-02/index.html" class="tarjeta"><img src="imagenes/proyecto-02.jpg" alt="Proyecto 2"><span>02 — Proyecto dos</span></a>
-        <a href="proyectos/proyecto-03/index.html" class="tarjeta"><img src="imagenes/proyecto-03.jpg" alt="Proyecto 3"><span>03 — Proyecto tres</span></a>
-        <a href="proyectos/proyecto-04/index.html" class="tarjeta"><img src="imagenes/proyecto-04.jpg" alt="Proyecto 4"><span>04 — Proyecto cuatro</span></a>
-        <a href="proyectos/proyecto-05/index.html" class="tarjeta"><img src="imagenes/proyecto-05.jpg" alt="Proyecto 5"><span>05 — Proyecto cinco</span></a>
-        <a href="proyectos/proyecto-06/index.html" class="tarjeta"><img src="imagenes/proyecto-06.jpg" alt="Proyecto 6"><span>06 — Proyecto seis</span></a>
+        <a href="proyectos/proyecto-01/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-01.jpg" alt="Proyecto 1"><span class="tarjeta-numero">01 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 01</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
+        <a href="proyectos/proyecto-02/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-02.jpg" alt="Proyecto 2"><span class="tarjeta-numero">02 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 02</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
+        <a href="proyectos/proyecto-03/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-03.jpg" alt="Proyecto 3"><span class="tarjeta-numero">03 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 03</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
+        <a href="proyectos/proyecto-04/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-04.jpg" alt="Proyecto 4"><span class="tarjeta-numero">04 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 04</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
+        <a href="proyectos/proyecto-05/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-05.jpg" alt="Proyecto 5"><span class="tarjeta-numero">05 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 05</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
+        <a href="proyectos/proyecto-06/index.html" class="tarjeta"><div class="tarjeta-imagen"><img src="imagenes/proyecto-06.jpg" alt="Proyecto 6"><span class="tarjeta-numero">06 / 06</span></div><div class="tarjeta-detalle"><div><strong>Proyecto 06</strong><br><small>Experimento interactivo</small></div><span class="tarjeta-flecha" aria-hidden="true">↗</span></div></a>
       </div>
     </section>
 
     <!-- Frase y collage final -->
     <section class="frase-seccion">
       <div class="frase-imagen"><img src="imagenes/collage-01.jpg" alt="Detalle de un proyecto"></div>
-      <div class="frase-contenido"><p>“Diseñar es explorar posibilidades, experimentar y transformar ideas.”</p></div>
+      <div class="frase-contenido"><span class="eyebrow">Una idea para recordar</span><p>“Diseñar es explorar posibilidades, experimentar y transformar ideas.”</p></div>
       <div class="frase-imagen"><img src="imagenes/collage-02.jpg" alt="Proceso creativo"></div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>Antonia Aguilera</span>
-    <a href="mailto:Antito.aguilazo@gmail.com">Contacto</a>
-    <span>Portafolio digital · 2026</span>
+    <span class="footer-nombre">Antonia Aguilera ✿</span>
+    <div class="footer-enlaces"><a href="mailto:Antito.aguilazo@gmail.com">Contacto ↗</a><span>Portafolio digital · 2026</span></div>
   </footer>
+
+  <!-- Mariposa original de p5.js flotando sobre la página -->
+  <div id="mariposa-flotante" aria-hidden="true"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/p5.min.js"></script>
+  <script src="mariposa.js"></script>
 </body>
 </html>

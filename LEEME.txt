@@ -1,11 +1,21 @@
-PORTAFOLIO P5.JS - ACTUALIZACIÓN DE DISEÑO
+PORTAFOLIO NATURALEZA PASTEL
 
-Se conservó la página principal. Cada página de proyecto ahora muestra:
-1) p5.js hasta 400 x 400 a la izquierda y texto a la derecha.
-2) Imagen de referencia hasta 400 x 400 debajo y texto a la derecha.
-3) Footer original.
+Coloca tus fotografías convertidas a JPG en la carpeta imagenes.
+Nombres de página principal: portada.jpg, proyecto-01.jpg a proyecto-06.jpg, collage-01.jpg, collage-02.jpg.
+Nombres de referencias: referencia-01.jpg a referencia-06.jpg.
 
-Coloca las imágenes en la carpeta imagenes/ usando los nombres listados en NOMBRES_IMAGENES.txt.
-Abre index.html con Live Server. Los proyectos p5.js necesitan conexión a Internet.
+Abre index.html con Live Server.
+Las páginas de proyectos están en proyectos/proyecto-XX/index.html.
+Edita sus textos de ejemplo directamente en el HTML.
+Los sketches de p5.js se cargan desde Internet y conservan su enlace original.
+El marco externo mide 400 x 400 px en escritorio; el canvas interno lo define cada sketch.
 
-Actualización: título Portafolio digital a 12px en todas las páginas; fuente Alegreya SC en lugar de Italianno; páginas individuales con marco p5.js de hasta 400x400 px.
+Paleta: Sky #7FB9E6, Lavender #D6BEEA, Butter #F4D77A, Matcha #B7C96A, Pink #F98BA9, Tangerine #FF8F45.
+
+MARIPOSA FLOTANTE
+El dibujo proporcionado corresponde a una MARIPOSA (no a una chinita).
+Se añadió mariposa.js solamente en la página principal. Usa p5.js desde CDN,
+por lo que necesita Internet. Se mueve por la ventana visible al hacer scroll.
+Para cambiar el tamaño: abre mariposa.js y edita p.scale(0.10).
+Para cambiar la velocidad: modifica tx += 0.005 y ty += 0.005.
+No se alteraron los seis sketches incrustados.
