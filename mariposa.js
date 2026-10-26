@@ -1,6 +1,3 @@
-// Adaptación del sketch original de Antonia a una capa transparente.
-// Se conserva el dibujo de mariposa, el movimiento Perlin noise y el aleteo.
-// p5.js se ejecuta en modo instancia para no interferir con otros sketches.
 const mariposaFlotante = (p) => {
   let x, y;
   let tx = 0, ty = 1000;
@@ -18,7 +15,7 @@ const mariposaFlotante = (p) => {
   };
 
   p.draw = () => {
-    p.clear(); // Importante: fondo transparente, NO background(255).
+    p.clear();
 
     tx += 0.005;
     ty += 0.005;
@@ -32,7 +29,6 @@ const mariposaFlotante = (p) => {
     const dx = x - prevX, dy = y - prevY;
     if (p.dist(0, 0, dx, dy) > 0.05) {
       const anguloDestino = p.atan2(dy, dx);
-      // Giro progresivo por el camino angular más corto.
       const diferencia = p.atan2(p.sin(anguloDestino - angulo), p.cos(anguloDestino - angulo));
       angulo += diferencia * 0.08;
     }
@@ -41,7 +37,7 @@ const mariposaFlotante = (p) => {
     p.push();
     p.translate(x, y);
     p.rotate(angulo);
-    p.scale(0.10); // Tamaño en pantalla. Original: 0.05 (más pequeño).
+    p.scale(0.10);
 
     p.push();
     p.rotate(-movimientoAlas);

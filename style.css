@@ -4,11 +4,11 @@
   --sky: #7FB9E6;
   --lavender: #D6BEEA;
   --butter: #F4D77A;
-  --matcha: #B7C96A;
+  --matcha: #89db72;
   --pink: #F98BA9;
   --tangerine: #FF8F45;
   --cream: #FFF8EC;
-  --ink: #33462F;
+  --ink: #295320;
   --line: #71845E;
 }
 * { box-sizing: border-box; }
@@ -99,7 +99,7 @@ main { max-width: 1500px; margin-inline: auto; }
 .footer-nombre { font: 400 clamp(35px, 5vw, 66px)/1 'Alegreya SC', serif; }
 .footer-enlaces { display: flex; flex-direction: column; align-items: end; gap: 10px; }
 
-/* Páginas de proyectos: sketch de 400px a la izquierda, texto a la derecha */
+/* Páginas de proyectos */
 .pagina-proyecto { padding: 40px clamp(20px, 5vw, 72px) 85px; min-height: 75vh; }
 .proyecto-encabezado { display: flex; justify-content: space-between; align-items: end; gap: 20px; padding: 0 0 26px; margin-bottom: 32px; border-bottom: 1px solid var(--ink); }
 .proyecto-encabezado h2 { margin: 8px 0 0; font: 400 clamp(52px, 6vw, 84px)/1 'Alegreya SC', serif; }
@@ -142,7 +142,7 @@ main { max-width: 1500px; margin-inline: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
 
-/* Capa transparente: no bloquea enlaces ni el scroll */
+/* Mariposa flotante */
 #mariposa-flotante {
   position: fixed;
   inset: 0;
@@ -155,10 +155,7 @@ main { max-width: 1500px; margin-inline: auto; }
   pointer-events: none;
 }
 
-/* ACTUALIZACIÓN: proyecto e imagen de referencia en paralelo.
-   El contenedor del sketch mantiene el tamaño de canvas por defecto (400x400).
-   Para sketches de otras medidas, ajustar --canvas-ancho y --canvas-alto
-   en .proyecto-marco--sketch. */
+/* Disposición de proyectos */
 .pagina-proyecto { max-width: 1280px; margin-inline: auto; }
 .proyecto-encabezado { align-items: baseline; }
 .proyecto-encabezado > div { min-width: 0; }
@@ -205,28 +202,25 @@ main { max-width: 1500px; margin-inline: auto; }
   .proyecto-marco--referencia { max-width: 100%; }
 }
 
-/* ==========================================================
-   AJUSTES FINALES: portada única, referencias simétricas y
-   jerarquía editorial consistente en las seis páginas.
-   ========================================================== */
-
-/* Imagen única de presentación: sin celdas de collage. */
+/* Imagen principal */
 .presentacion-imagen-unica {
   display: block;
   width: 100%;
-  aspect-ratio: 1.4 / 1;
+  max-width: 450px; 
+  aspect-ratio: 1.4 / 1; 
   min-height: 0;
   overflow: hidden;
   background: var(--butter);
+  border-radius: 20px;
 }
+
 .presentacion-imagen-unica > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-/* Fotografías de la frase con medidas, encuadre y forma idénticos. */
+/* Fotografías */
 .frase-seccion {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr);
   align-items: center;
@@ -242,7 +236,7 @@ main { max-width: 1500px; margin-inline: auto; }
   border-radius: 150px 150px 22px 22px;
 }
 
-/* Jerarquía de textos: se respetan las fuentes y tamaños de títulos. */
+/* Tipografía y distribución */
 .proyecto-encabezado { align-items: end; }
 .proyecto-encabezado h2 { margin: 8px 0 0; }
 .proyecto-columnas {
@@ -320,3 +314,5 @@ main { max-width: 1500px; margin-inline: auto; }
     height: 100%;
     object-fit: cover;
 }
+/* Proyecto 06 */
+.proyecto-marco--grande { width: min(100%, 500px); aspect-ratio: 1 / 1; }
